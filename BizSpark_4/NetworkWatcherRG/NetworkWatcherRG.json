@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "networkWatchers_NetworkWatcher_westeurope_name": {
+      "defaultValue": null,
+      "type": "String"
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkWatchers",
+      "apiVersion": "2019-04-01",
+      "name": "[parameters('networkWatchers_NetworkWatcher_westeurope_name')]",
+      "location": "westeurope",
+      "properties": {
+        "provisioningState": "Succeeded"
+      }
+    }
+  ]
+}
